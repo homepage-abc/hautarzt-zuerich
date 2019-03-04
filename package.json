@@ -1,0 +1,36 @@
+{
+  "name": "hautarzt-zuerich",
+  "version": "1.0.0",
+  "description": "Child Theme for GeneratePress",
+  "private": true,
+  "homepage": "http://hautarzt-zuerich",
+  "author": {
+    "name": "Christian Zumbrunnen",
+    "email": "info@homepage-abc.ch",
+    "url": "https://homepage-abc.ch"
+  },
+  "license": "GPL-2.0",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/homepage-abc/gp-child.git"
+  },
+  "devDependencies": {
+    "autoprefixer": "^7.1.6",
+    "cssnano": "^3.10.0",
+    "node-sass": "^4.9.0",
+    "nodemon": "^1.17.5",
+    "postcss": "^6.0.22",
+    "postcss-cli": "^4.1.1",
+    "sass-lint": "^1.12.1"
+  },
+  "scripts": {
+    "prebuild:css": "node-sass --source-map true sass/style.scss --output ./",
+    "build:css": "postcss --use autoprefixer -b 'last 2 versions' < style.css | postcss --use cssnano > ./style.min.css",
+    "build": "npm run build:css",
+    "watch:css": "nodemon --watch style.scss -e scss -x 'npm run build:css'",
+    "watch": "nodemon --watch style.scss -e scss -x 'npm run build'"
+  },
+  "dependencies": {
+    "npm": "^5.10.0"
+  }
+}
