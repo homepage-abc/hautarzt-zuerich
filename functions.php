@@ -99,3 +99,18 @@ add_action( 'after_setup_theme', 'generate_gutenberg_color_palette' ); */
 	];
 }
 add_action( 'init', 'generate_gutenberg_block_template' ); */
+
+
+/**
+ * Have Ultimate Addons for Gutenberg Post Layout (Grid) order posts by menu_order.
+ * Should become an option in the gui with next release.
+ * Code can be deleted then
+ *
+ * @see Mail from Brainstorm Force Mittwoch, 13. März, 05:35
+ * */
+add_filter( 'uagb_post_query_args_grid', function ( $args ) {
+
+	$args['orderby'] = 'menu_order';
+	return $args;
+
+	} );
