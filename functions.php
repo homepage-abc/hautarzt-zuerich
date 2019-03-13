@@ -18,18 +18,26 @@ function generatepress_child_enqueue_scripts() {
 add_action( 'wp_enqueue_scripts', 'generatepress_child_enqueue_scripts', 100 );
 
 /**
- * Set default Color Swatch based on PRESENCE.swiss colors.
+ * Set default Color Swatch based on colors in Photoshop.
+ * Hintergrund (light orange)
+ * Fliesstext (black)
+ * Orange
+ * Grau Header / links unten
+ * Schrift im Grau
+ * Orange linke Navi
+ * Orange Kästchen Standort
+ * Grau Kästchen Kontakt
  */
 function hpabc_default_color_swatch() {
 	return [
+		'#ffeddc',
 		'#000000',
-		'#FFFFFF',
-		'#f18811',
-		'#f7a824',
-		'#fac878',
-		'#4f5d83',
-		'#888caa',
-		'#cbcbda',
+		'#fba74c',
+		'#aea9b5',
+		'#182a51',
+		'#fed9b3',
+		'#f68b28',
+		'#4d6084',
 	];
 }
 
