@@ -8,7 +8,7 @@
  GitHub Theme URI:  homepage-abc/hautarzt-zuerich.ch
  Text Domain:       hpabc
  Domain Path:       /languages
- Version:           0.0.9
+ Version:           0.1.0
 */
 
 
@@ -17,34 +17,40 @@
  * https://de.wordpress.org/plugins/font-awesome/)
 **/
 
-a[href]::before {
+a[href$= ".pdf"]::before {
     font-family: "Font Awesome 5 Free";
     font-size: larger;
     padding-right: 0.4em;
-}
-
-a[href$= ".pdf"]::before {
     content: "\f1c1 ";
 }
 
 a[href$= ".doc"]::before,
-a[href$= ".docx"]::before
-{
+a[href$= ".docx"]::before {
+    font-family: "Font Awesome 5 Free";
+    font-size: larger;
+    padding-right: 0.4em;
     content: "\f1c2 ";
 }
 
 a[href$= ".xls"]::before,
-a[href$= ".xlsx"]::before
-{
+a[href$= ".xlsx"]::before {
+    font-family: "Font Awesome 5 Free";
+    font-size: larger;
+    padding-right: 0.4em;
     content: "\f1c3 ";
 }
 
 a[href^="tel:"]::before {
+    font-family: "Font Awesome 5 Free";
+    font-size: larger;
+    padding-right: 0.4em;
     content: "\f2a0 ";
 }
 
 a[href^="mailto:"]::before {
-    content: "\f0e0 ";
+    font-family: "Font Awesome 5 Free";
+    font-size: larger;
+    padding-right: 0.4em;    content: "\f0e0 ";
 }
 
 
