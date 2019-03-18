@@ -8,7 +8,7 @@
  GitHub Theme URI:  homepage-abc/hautarzt-zuerich.ch
  Text Domain:       hpabc
  Domain Path:       /languages
- Version:           0.1.0
+ Version:           0.1.1
 */
 /**
  * Font Awesome for PDF, Tel etc (needs of course Font Awesome installed with Plugin:
@@ -38,7 +38,9 @@ a[href^="tel:"]::before {
   font-family: "Font Awesome 5 Free";
   font-size: larger;
   padding-right: 0.4em;
-  content: "\f2a0 "; }
+  /* content: "\f2a0 "; */
+  /* content: "\f095 "; */
+  content: "\f1c1 "; }
 
 a[href^="mailto:"]::before {
   font-family: "Font Awesome 5 Free";
