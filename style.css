@@ -38,9 +38,7 @@ a[href^="tel:"]::before {
   font-family: "Font Awesome 5 Free";
   font-size: larger;
   padding-right: 0.4em;
-  /* content: "\f2a0 "; */
-  /* content: "\f095 "; */
-  content: "\f1c1 "; }
+  content: "\f2a0 "; }
 
 a[href^="mailto:"]::before {
   font-family: "Font Awesome 5 Free";
