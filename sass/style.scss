@@ -8,12 +8,30 @@
  GitHub Theme URI:  homepage-abc/hautarzt-zuerich.ch
  Text Domain:       hpabc
  Domain Path:       /languages
- Version:           0.0.7
+ Version:           0.0.8
 */
 
+
+/**
+ * Font Awesome for PDF (needs of course Font Awesome installed with Plugin:
+ * https://de.wordpress.org/plugins/font-awesome/)
+**/
 a[href$= ".pdf"]::before {
     font-family: "Font Awesome 5 Free";
     font-size: larger;
     content: "\f1c1 ";
     padding-right: 0.4em;
+}
+
+
+/**
+ * Logo left of title
+**/
+.site-branding {
+    display: inline-block;
+}
+
+.site-logo {
+    float: left;
+    margin-right: 20px;
 }
