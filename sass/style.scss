@@ -51,18 +51,63 @@ a[href^="tel:"]::before {
 a[href^="mailto:"]::before {
     font-family: "Font Awesome 5 Free";
     font-size: larger;
-    padding-right: 0.4em;    content: "\f0e0 ";
+    padding-right: 0.4em;
+    content: "\f0e0 ";
 }
 
+
+/**
+  * Ordered list class for alphanumeric and roman numbering
+**/
+
+ol.upper-alpha {
+    list-style:upper-alpha;
+  }
+  ol.lower-alpha {
+    list-style:lower-alpha;
+  }
+  ol.upper-roman {
+    list-style:upper-roman;
+  }
+  ol.lower-roman {
+    list-style:lower-roman;
+  }
 
 /**
  * Logo left of title
 **/
 .site-branding {
-    display: inline-block;
-}
+  display: inline-block; }
 
 .site-logo {
-    float: left;
-    margin-right: 20px;
+  float: left;
+  margin-right: 20px;
+  margin-top: -20px;
+}
+
+
+/**
+ * Adjust colors for Footer-Menu
+**/
+
+  .menu-footermenu-container {
+    background-color: #fff;
+    padding: 1em;
+    border: #182a51 solid 2px;
+    border-radius: 1em;
+	  margin-right: 5em;
+}
+
+
+/**
+ * Adjust colors for Sidebar Widgets
+**/
+
+.sidebar .widget a {
+    color: #182a51;
+}
+.sidebar .widget a:hover,
+.sidebar .widget a:visited
+{
+    color: #000;
 }
