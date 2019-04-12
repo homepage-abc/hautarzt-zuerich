@@ -108,17 +108,37 @@ add_action( 'after_setup_theme', 'generate_gutenberg_color_palette' ); */
 }
 add_action( 'init', 'generate_gutenberg_block_template' ); */
 
-
 /**
- * Have Ultimate Addons for Gutenberg Post Layout (Grid) order posts by menu_order.
- * Should become an option in the gui with next release.
- * Code can be deleted then
+ * Add link to attachments to e-mails.
  *
- * @see Mail from Brainstorm Force Mittwoch, 13. März, 05:35
- * */
-add_filter( 'uagb_post_query_args_grid', function ( $args ) {
+ */
 
-	$args['orderby'] = 'menu_order';
-	return $args;
+function custom_attachment_email_part_value( $value, $original_value, $part, $destination ) {
+  if ( isset( $part['type'] ) && 'attachment' === $part['type'] ) {
+    if ( 'email' === $destination ) {
+      $hash_ids = maybe_unserialize( $original_value );
+      $hash_ids = array_filter( array_values( $hash_ids ) );
 
-	} );
+      $attachments = happyforms_get_attachment_controller()->get( array(
+        'hash_id' => $hash_ids
+      ) );
+
+      $links = array();
+
+      foreach ( $attachments as $attachment ) {
+        $attachment_id = $attachment['ID'];
+        $title = $attachment['post_title'];
+        $url = wp_get_attachment_url( $attachment_id );
+        $file_size = size_format( filesize( get_attached_file( $attachment_id ) ), 2 );
+        $links[] = "<a href=\"{$url}\" target=\"_blank\">{$title}</a> ({$file_size})";
+      }
+
+      $value = implode( ', ', $links );
+    }
+  }
+
+  return $value;
+}
+
+add_filter( 'happyforms_message_part_value', 'custom_attachment_email_part_value', 10, 4 );
+
