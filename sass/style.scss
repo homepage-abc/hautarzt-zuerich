@@ -8,7 +8,7 @@
  GitHub Theme URI:  homepage-abc/hautarzt-zuerich.ch
  Text Domain:       hpabc
  Domain Path:       /languages
- Version:           0.1.7
+ Version:           0.1.9
 */
 
 
@@ -110,4 +110,12 @@ ol.upper-alpha {
 .sidebar .widget a:visited
 {
     color: #000;
+
+  }
+
+/**
+ * Better Typographie for Headers
+**/
+h4, h5, h6 {
+  margin-bottom: 10px;
 }
