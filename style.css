@@ -8,7 +8,7 @@
  GitHub Theme URI:  homepage-abc/hautarzt-zuerich.ch
  Text Domain:       hpabc
  Domain Path:       /languages
- Version:           0.2.2
+ Version:           0.2.3
 */
 /**
  * Font Awesome for PDF, Tel etc (needs of course Font Awesome installed with Plugin:
@@ -123,7 +123,7 @@ h4, h5, h6 {
 .main-navigation ul li.praxis::after {
   background-color: #c0c3d2; }
 
-.main-navigation ul li.patientenninfo::after {
+.main-navigation ul li.patienteninfo::after {
   background-color: #8188a5; }
 
 .main-navigation ul li.kontakt-termin::after {
