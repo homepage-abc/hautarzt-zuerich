@@ -16,12 +16,12 @@
   },
   "devDependencies": {
     "autoprefixer": "^7.1.6",
-    "cssnano": "^3.10.0",
-    "node-sass": "^4.9.0",
-    "nodemon": "^1.17.5",
+    "cssnano": "^4.1.10",
+    "node-sass": "^4.12.0",
+    "nodemon": "^1.19.0",
     "postcss": "^6.0.22",
-    "postcss-cli": "^4.1.1",
-    "sass-lint": "^1.12.1"
+    "postcss-cli": "^6.1.2",
+    "sass-lint": "^1.13.1"
   },
   "scripts": {
     "prebuild:css": "node-sass --source-map true sass/style.scss --output ./",
@@ -31,6 +31,6 @@
     "watch": "nodemon --watch style.scss -e scss -x 'npm run build'"
   },
   "dependencies": {
-    "npm": "^5.10.0"
+    "npm": "^6.9.0"
   }
 }
