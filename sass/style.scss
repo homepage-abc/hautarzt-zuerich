@@ -8,7 +8,7 @@
  GitHub Theme URI:  homepage-abc/hautarzt-zuerich.ch
  Text Domain:       hpabc
  Domain Path:       /languages
- Version:           0.2.3
+ Version:           0.2.5
 */
 
 
@@ -135,25 +135,20 @@ h4, h5, h6 {
   right: 0;
 }
 
-.main-navigation ul li.dermatologie::after {
-  background-color: #fac478;
-}
+.main-navigation ul li.dermatologie:hover::after {
+  background-color: #fac478; }
 
-.main-navigation ul li.aesthetische-medizin::after {
-  background-color: #f68b28;
-}
+.main-navigation ul li.aesthetische-medizin:hover::after {
+  background-color: #f68b28; }
 
-.main-navigation ul li.team::after {
-  background-color: #ffffff;
-}
+.main-navigation ul:hover li.team:hover::after {
+  background-color: #ffffff; }
 
-.main-navigation ul li.praxis::after {
-  background-color: #c0c3d2;
-}
+.main-navigation ul:hover li.praxis:hover::after {
+  background-color: #c0c3d2; }
 
-.main-navigation ul li.patienteninfo::after {
-  background-color: #8188a5;
-}
-.main-navigation ul li.kontakt-termin::after {
-  background-color: #4d6084;
-}
+.main-navigation ul:hover li.patienteninfo:hover::after {
+  background-color: #8188a5; }
+
+.main-navigation ul:hover li.kontakt-termin:hover::after {
+  background-color: #4d6084; }
