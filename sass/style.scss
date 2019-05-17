@@ -8,7 +8,7 @@
  GitHub Theme URI:  homepage-abc/hautarzt-zuerich.ch
  Text Domain:       hpabc
  Domain Path:       /languages
- Version:           0.2.8
+ Version:           0.2.9
 */
 
 /**
@@ -17,7 +17,11 @@
 **/
 
 a[href$= ".pdf"]::before {
-    font-family: "Font Awesome 5 Free";
+    display: inline-block;
+    font-style: normal;
+    font-variant: normal;
+    text-rendering: auto;
+    font-family: "Font Awesome 5 Pro";
     font-size: larger;
     padding-right: 0.4em;
     content: "\f1c1 ";
@@ -25,35 +29,65 @@ a[href$= ".pdf"]::before {
 
 a[href$= ".doc"]::before,
 a[href$= ".docx"]::before {
-    font-family: "Font Awesome 5 Free";
-    font-size: larger;
-    padding-right: 0.4em;
+  display: inline-block;
+  font-style: normal;
+  font-variant: normal;
+  text-rendering: auto;
+  font-family: "Font Awesome 5 Pro";
+  font-size: larger;
+  padding-right: 0.4em;
     content: "\f1c2 ";
 }
 
 a[href$= ".xls"]::before,
 a[href$= ".xlsx"]::before {
-    font-family: "Font Awesome 5 Free";
-    font-size: larger;
-    padding-right: 0.4em;
+  display: inline-block;
+  font-style: normal;
+  font-variant: normal;
+  text-rendering: auto;
+  font-family: "Font Awesome 5 Pro";
+  font-size: larger;
+  padding-right: 0.4em;
     content: "\f1c3 ";
 }
 
 a[href^="tel:"]::before {
-    font-family: "Font Awesome 5 Free";
-    font-size: larger;
-    padding-right: 0.4em;
+  display: inline-block;
+  font-style: normal;
+  font-variant: normal;
+  text-rendering: auto;
+  font-family: "Font Awesome 5 Pro";
+  font-size: larger;
+  padding-right: 0.4em;
     /*content: "\f2a0 ";*/
     content: "\f098 ";
 }
 
 a[href^="mailto:"]::before {
-    font-family: "Font Awesome 5 Free";
-    font-size: larger;
-    padding-right: 0.4em;
+  display: inline-block;
+  font-style: normal;
+  font-variant: normal;
+  text-rendering: auto;
+  font-family: "Font Awesome 5 Pro";
+  font-size: larger;
+  padding-right: 0.4em;
     content: "\f0e0 ";
 }
-
+/**
+  * Make Links a little bit bolder
+**/
+.inside-article a,
+.inside-article a:visited,
+.paging-navigation a,
+.paging-navigation a:visited,
+.comments-area a,
+.comments-area a:visited,
+.page-header a,
+.page-header a:visited,
+.site-info a,
+.site-info a:visited {
+  font-weight: bolder;
+}
 
 /**
   * Ordered list class for alphanumeric and roman numbering
