@@ -8,7 +8,7 @@
  GitHub Theme URI:  homepage-abc/hautarzt-zuerich.ch
  Text Domain:       hpabc
  Domain Path:       /languages
- Version:           0.2.6
+ Version:           0.2.7
 */
 /**
  * Font Awesome for PDF, Tel etc (needs of course Font Awesome installed with Plugin:
@@ -77,11 +77,7 @@ ol.lower-roman {
  * Adjust colors for Footer-Menu
 **/
 .menu-footermenu-container {
-  background-color: #fff;
-  padding: 1em;
-  border: #182a51 solid 2px;
-  border-radius: 1em;
-  margin-right: 5em; }
+  padding: 1em; }
 
 /**
  * Adjust colors for Sidebar Widgets
