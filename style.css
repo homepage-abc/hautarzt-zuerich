@@ -114,7 +114,7 @@ h4, h5, h6 {
 
 /** Ästhetische Medizin **/
 .main-navigation ul li.aesthetische-medizin:hover::after {
-  background-color: #faa634; }
+  background-color: #f68b28; }
 
 /** Praxis **/
 .main-navigation ul:hover li.praxis:hover::after {
