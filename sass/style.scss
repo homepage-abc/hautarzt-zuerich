@@ -8,7 +8,7 @@
  GitHub Theme URI:  homepage-abc/hautarzt-zuerich.ch
  Text Domain:       hpabc
  Domain Path:       /languages
- Version:           0.2.9
+ Version:           0.3.0
 */
 
 /**
@@ -17,14 +17,14 @@
 **/
 
 a[href$= ".pdf"]::before {
-    display: inline-block;
-    font-style: normal;
-    font-variant: normal;
-    text-rendering: auto;
-    font-family: "Font Awesome 5 Pro";
-    font-size: larger;
-    padding-right: 0.4em;
-    content: "\f1c1 ";
+  display: inline-block;
+  font-style: normal;
+  font-variant: normal;
+  text-rendering: auto;
+  font-family: "Font Awesome 5 Pro";
+  font-size: larger;
+  padding-right: 0.4em;
+  content: "\f1c1 ";
 }
 
 a[href$= ".doc"]::before,
@@ -36,7 +36,7 @@ a[href$= ".docx"]::before {
   font-family: "Font Awesome 5 Pro";
   font-size: larger;
   padding-right: 0.4em;
-    content: "\f1c2 ";
+  content: "\f1c2 ";
 }
 
 a[href$= ".xls"]::before,
@@ -48,7 +48,7 @@ a[href$= ".xlsx"]::before {
   font-family: "Font Awesome 5 Pro";
   font-size: larger;
   padding-right: 0.4em;
-    content: "\f1c3 ";
+  content: "\f1c3 ";
 }
 
 a[href^="tel:"]::before {
@@ -59,8 +59,7 @@ a[href^="tel:"]::before {
   font-family: "Font Awesome 5 Pro";
   font-size: larger;
   padding-right: 0.4em;
-    /*content: "\f2a0 ";*/
-    content: "\f098 ";
+  content: "\f2a0 ";
 }
 
 a[href^="mailto:"]::before {
@@ -71,8 +70,21 @@ a[href^="mailto:"]::before {
   font-family: "Font Awesome 5 Pro";
   font-size: larger;
   padding-right: 0.4em;
-    content: "\f0e0 ";
+  content: "\f0e0 ";
 }
+
+
+a[href^="http://"]:not([href*="hautarzt-zuerich.ch"]):before,
+a[href^="https://"]:not([href*="hautarzt-zuerich.ch"]):before {
+  display: inline-block;
+  font-style: normal;
+  font-variant: normal;
+  text-rendering: auto;
+  font-family: "Font Awesome 5 Pro";
+  font-size: larger;
+  padding-right: 0.4em;
+  content: "\f08e ";}
+
 /**
   * Make Links a little bit bolder
 **/
