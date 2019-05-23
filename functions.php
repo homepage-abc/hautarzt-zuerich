@@ -141,3 +141,8 @@ function custom_attachment_email_part_value( $value, $original_value, $part, $de
 }
 
 add_filter( 'happyforms_message_part_value', 'custom_attachment_email_part_value', 10, 4 );
+
+
+function add_google_fonts() {
+	wp_enqueue_style( ' add_google_fonts ', ' https://fonts.googleapis.com/css?family=Open+Sans:300,400', false );}
+	add_action( 'wp_enqueue_scripts', 'add_google_fonts' );
