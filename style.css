@@ -9,7 +9,7 @@
  GitHub Theme URI:  homepage-abc/hautarzt-zuerich.ch
  Text Domain:       hpabc
  Domain Path:       /languages
- Version:           0.3.2
+ Version:           0.3.5
 */
 /**
  * Font Awesome for PDF, Tel etc (needs of course Font Awesome installed with Plugin:
@@ -45,140 +45,143 @@ a[href$=".xlsx"]::before {
   font-family: "Font Awesome 5 Pro";
   font-size: larger;
   padding-right: 0.4em;
-  content: "\f1c3 "; }
-
-a[href^="tel:"]::before {
-  display: inline-block;
-  font-style: normal;
-  font-variant: normal;
-  text-rendering: auto;
-  font-family: "Font Awesome 5 Pro";
-  font-size: larger;
-  padding-right: 0.4em;
-  content: "\f2a0 "; }
-
-a[href^="mailto:"]::before {
-  display: inline-block;
-  font-style: normal;
-  font-variant: normal;
-  text-rendering: auto;
-  font-family: "Font Awesome 5 Pro";
-  font-size: larger;
-  padding-right: 0.4em;
-  content: "\f0e0 "; }
-
-a[href^="http://"]:not([href*="hautarzt-zuerich.ch"]):before,
-a[href^="https://"]:not([href*="hautarzt-zuerich.ch"]):before {
-  display: inline-block;
-  font-style: normal;
-  font-variant: normal;
-  text-rendering: auto;
-  font-family: "Font Awesome 5 Pro";
-  font-size: larger;
-  padding-right: 0.4em;
-  content: "\f08e "; }
-
-/**
+  content: "\f1c3 ";
+  /**
   * Make Links a little bit bolder
 **/
-.inside-article a,
-.inside-article a:visited,
-.paging-navigation a,
-.paging-navigation a:visited,
-.comments-area a,
-.comments-area a:visited,
-.page-header a,
-.page-header a:visited,
-.site-info a,
-.site-info a:visited {
-  font-weight: bolder; }
-
-/* but not for the ones in the table */
-table.wp-block-table a {
-  font-weight: normal; }
-
-/**
+  /* but not for the ones in the table */
+  /**
   * Ordered list class for alphanumeric and roman numbering
 **/
-ol.upper-alpha {
-  list-style: upper-alpha; }
-
-ol.lower-alpha {
-  list-style: lower-alpha; }
-
-ol.upper-roman {
-  list-style: upper-roman; }
-
-ol.lower-roman {
-  list-style: lower-roman; }
-
-/**
+  /**
  * Logo left of title
 **/
-.site-branding {
-  display: inline-block; }
-
-.site-logo {
-  float: left;
-  margin-right: 20px;
-  margin-top: -20px; }
-
-/**
+  /**
  * Adjust colors for Footer-Menu
 **/
-.menu-footermenu-container {
-  padding: 1em; }
-
-/**
+  /**
  * Adjust colors for Sidebar Widgets
 **/
-.sidebar .widget a {
-  color: #182a51; }
-
-.sidebar .widget a:hover,
-.sidebar .widget a:visited {
-  color: #000; }
-
-/**
+  /**
  * Better Typographie for Headers
 **/
-h4, h5, h6 {
-  margin-bottom: 10px; }
-
-/**
+  /**
  * Effekt mit farbigen Quadraten für Menu
 **/
-.main-navigation ul li::after {
-  height: 15px;
-  width: 15px;
-  display: block;
-  content: "";
-  position: absolute;
-  bottom: 0;
-  right: 0; }
-
-/** Dermatologie **/
-.main-navigation ul li.dermatologie:hover::after {
-  background-color: #fac478; }
-
-/** Ästhetische Medizin **/
-.main-navigation ul li.aesthetische-medizin:hover::after {
-  background-color: #f68b28; }
-
-/** Praxis **/
-.main-navigation ul:hover li.praxis:hover::after {
-  background-color: #ffffff; }
-
-/** Team **/
-.main-navigation ul:hover li.team:hover::after {
-  background-color: #c0c3d2; }
-
-/** Kontakt & Termine **/
-.main-navigation ul:hover li.kontakt-termin:hover::after {
-  background-color: #8188a5; }
-
-/** Informationsblätter **/
-.main-navigation ul:hover li.patienteninfo:hover::after {
-  background-color: #4d6084; }
+  /** Dermatologie **/
+  /** Ästhetische Medizin **/
+  /** Praxis **/
+  /** Team **/
+  /** Kontakt & Termine **/
+  /** Informationsblätter **/ }
+  a[href$=".xls"]::before a[href^="mailto:"]::before,
+  a[href$=".xlsx"]::before a[href^="mailto:"]::before {
+    display: inline-block;
+    font-style: normal;
+    font-variant: normal;
+    text-rendering: auto;
+    font-family: "Font Awesome 5 Pro";
+    font-size: larger;
+    padding-right: 0.4em;
+    content: "\f0e0 "; }
+  a[href$=".xls"]::before a[href^="http://"]:not([href*="hautarzt-zuerich.ch"]):before,
+  a[href$=".xls"]::before a[href^="https://"]:not([href*="hautarzt-zuerich.ch"]):before,
+  a[href$=".xlsx"]::before a[href^="http://"]:not([href*="hautarzt-zuerich.ch"]):before,
+  a[href$=".xlsx"]::before a[href^="https://"]:not([href*="hautarzt-zuerich.ch"]):before {
+    display: inline-block;
+    font-style: normal;
+    font-variant: normal;
+    text-rendering: auto;
+    font-family: "Font Awesome 5 Pro";
+    font-size: larger;
+    padding-right: 0.4em;
+    content: "\f08e "; }
+  a[href$=".xls"]::before .inside-article a,
+  a[href$=".xls"]::before .inside-article a:visited,
+  a[href$=".xls"]::before .paging-navigation a,
+  a[href$=".xls"]::before .paging-navigation a:visited,
+  a[href$=".xls"]::before .comments-area a,
+  a[href$=".xls"]::before .comments-area a:visited,
+  a[href$=".xls"]::before .page-header a,
+  a[href$=".xls"]::before .page-header a:visited,
+  a[href$=".xls"]::before .site-info a,
+  a[href$=".xls"]::before .site-info a:visited,
+  a[href$=".xlsx"]::before .inside-article a,
+  a[href$=".xlsx"]::before .inside-article a:visited,
+  a[href$=".xlsx"]::before .paging-navigation a,
+  a[href$=".xlsx"]::before .paging-navigation a:visited,
+  a[href$=".xlsx"]::before .comments-area a,
+  a[href$=".xlsx"]::before .comments-area a:visited,
+  a[href$=".xlsx"]::before .page-header a,
+  a[href$=".xlsx"]::before .page-header a:visited,
+  a[href$=".xlsx"]::before .site-info a,
+  a[href$=".xlsx"]::before .site-info a:visited {
+    font-weight: bolder; }
+  a[href$=".xls"]::before table.wp-block-table a,
+  a[href$=".xlsx"]::before table.wp-block-table a {
+    font-weight: normal; }
+  a[href$=".xls"]::before ol.upper-alpha,
+  a[href$=".xlsx"]::before ol.upper-alpha {
+    list-style: upper-alpha; }
+  a[href$=".xls"]::before ol.lower-alpha,
+  a[href$=".xlsx"]::before ol.lower-alpha {
+    list-style: lower-alpha; }
+  a[href$=".xls"]::before ol.upper-roman,
+  a[href$=".xlsx"]::before ol.upper-roman {
+    list-style: upper-roman; }
+  a[href$=".xls"]::before ol.lower-roman,
+  a[href$=".xlsx"]::before ol.lower-roman {
+    list-style: lower-roman; }
+  a[href$=".xls"]::before .site-branding,
+  a[href$=".xlsx"]::before .site-branding {
+    display: inline-block; }
+  a[href$=".xls"]::before .site-logo,
+  a[href$=".xlsx"]::before .site-logo {
+    float: left;
+    margin-right: 20px;
+    margin-top: -20px; }
+  a[href$=".xls"]::before .menu-footermenu-container,
+  a[href$=".xlsx"]::before .menu-footermenu-container {
+    padding: 1em; }
+  a[href$=".xls"]::before .sidebar .widget a,
+  a[href$=".xlsx"]::before .sidebar .widget a {
+    color: #182a51; }
+  a[href$=".xls"]::before .sidebar .widget a:hover,
+  a[href$=".xls"]::before .sidebar .widget a:visited,
+  a[href$=".xlsx"]::before .sidebar .widget a:hover,
+  a[href$=".xlsx"]::before .sidebar .widget a:visited {
+    color: #000; }
+  a[href$=".xls"]::before h4, a[href$=".xls"]::before h5, a[href$=".xls"]::before h6,
+  a[href$=".xlsx"]::before h4,
+  a[href$=".xlsx"]::before h5,
+  a[href$=".xlsx"]::before h6 {
+    margin-bottom: 10px; }
+  a[href$=".xls"]::before .main-navigation ul li::after,
+  a[href$=".xlsx"]::before .main-navigation ul li::after {
+    height: 15px;
+    width: 15px;
+    display: block;
+    content: "";
+    position: absolute;
+    bottom: 0;
+    right: 0; }
+  a[href$=".xls"]::before .main-navigation ul li.dermatologie:hover::after,
+  a[href$=".xlsx"]::before .main-navigation ul li.dermatologie:hover::after {
+    background-color: #fac478; }
+  a[href$=".xls"]::before .main-navigation ul li.aesthetische-medizin:hover::after,
+  a[href$=".xlsx"]::before .main-navigation ul li.aesthetische-medizin:hover::after {
+    background-color: #f68b28; }
+  a[href$=".xls"]::before .main-navigation ul:hover li.praxis:hover::after,
+  a[href$=".xlsx"]::before .main-navigation ul:hover li.praxis:hover::after {
+    background-color: #ffffff; }
+  a[href$=".xls"]::before .main-navigation ul:hover li.team:hover::after,
+  a[href$=".xlsx"]::before .main-navigation ul:hover li.team:hover::after {
+    background-color: #c0c3d2; }
+  a[href$=".xls"]::before .main-navigation ul:hover li.kontakt-termin:hover::after,
+  a[href$=".xlsx"]::before .main-navigation ul:hover li.kontakt-termin:hover::after {
+    background-color: #8188a5; }
+  a[href$=".xls"]::before .main-navigation ul:hover li.patienteninfo:hover::after,
+  a[href$=".xlsx"]::before .main-navigation ul:hover li.patienteninfo:hover::after {
+    background-color: #4d6084; }
 
 /*# sourceMappingURL=style.css.map */

@@ -8,7 +8,7 @@
  GitHub Theme URI:  homepage-abc/hautarzt-zuerich.ch
  Text Domain:       hpabc
  Domain Path:       /languages
- Version:           0.3.4
+ Version:           0.3.5
 */
 
 /**
@@ -49,7 +49,7 @@ a[href$= ".xlsx"]::before {
   font-size: larger;
   padding-right: 0.4em;
   content: "\f1c3 ";
-}
+
 
 a[href^="mailto:"]::before {
   display: inline-block;
@@ -193,3 +193,4 @@ h4, h5, h6 {
 /** Informationsblätter **/
 .main-navigation ul:hover li.patienteninfo:hover::after {
   background-color: #4d6084; }
+}
