@@ -9,7 +9,7 @@
  GitHub Theme URI:  homepage-abc/hautarzt-zuerich.ch
  Text Domain:       hpabc
  Domain Path:       /languages
- Version:           0.3.8
+ Version:           0.3.9
 */
 /**
  * Font Awesome for PDF, Tel etc (needs of course Font Awesome installed with Plugin:
@@ -180,5 +180,16 @@ h4, h5, h6 {
 /** Informationsblätter **/
 .main-navigation ul:hover li.patienteninfo:hover::after {
   background-color: #4d6084; }
+
+/** Style Sidebar Submenu for better link-visibility **/
+.menu-subnavigation-dermatologie-container li,
+.menu-subnavigation-aesthetische-medizin-container li {
+  padding: 5px;
+  border-bottom: 1px solid #f68b28; }
+
+.menu-subnavigation-dermatologie-container li:hover,
+.menu-subnavigation-aesthetische-medizin-container li:hover {
+  background-color: #f68b28;
+  font-weight: bolder; }
 
 /*# sourceMappingURL=style.css.map */
