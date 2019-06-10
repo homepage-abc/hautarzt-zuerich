@@ -1,6 +1,6 @@
 @charset "UTF-8";
 /*
- Theme Name:        GeneratePress Child Theme
+ Theme Name:        hautarzt-zuerich GP Child Theme
  Theme URI:         https://generatepress.com
  Description:       GeneratePress child theme for hautarzt-zuerich
  Author:            Christian Zumbrunnen
@@ -9,7 +9,7 @@
  GitHub Theme URI:  homepage-abc/hautarzt-zuerich.ch
  Text Domain:       hpabc
  Domain Path:       /languages
- Version:           0.3.9
+ Version:           0.4.0
 */
 /**
  * Font Awesome for PDF, Tel etc (needs of course Font Awesome installed with Plugin:
@@ -188,7 +188,9 @@ h4, h5, h6 {
   border-bottom: 1px solid #f68b28; }
 
 .menu-subnavigation-dermatologie-container li:hover,
-.menu-subnavigation-aesthetische-medizin-container li:hover {
+.menu-subnavigation-dermatologie-container li.current-menu-item,
+.menu-subnavigation-aesthetische-medizin-container li:hover,
+.menu-subnavigation-aesthetische-medizin-container li.current-menu-item {
   background-color: #f68b28;
   font-weight: bolder; }
 
