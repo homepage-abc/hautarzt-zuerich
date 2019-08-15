@@ -140,7 +140,7 @@ function custom_attachment_email_part_value( $value, $original_value, $part, $de
   return $value;
 }
 
-// add_filter( 'happyforms_message_part_value', 'custom_attachment_email_part_value', 10, 4 );
+add_filter( 'happyforms_message_part_value', 'custom_attachment_email_part_value', 10, 4 );
 
 
 function add_google_fonts() {
