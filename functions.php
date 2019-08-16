@@ -114,34 +114,32 @@ add_action( 'init', 'generate_gutenberg_block_template' ); */
  */
 
 function custom_attachment_email_part_value( $value, $original_value, $part, $destination ) {
-  if ( isset( $part['type'] ) && 'attachment' === $part['type'] ) {
-    if ( 'email' === $destination ) {
-      $hash_ids = maybe_unserialize( $original_value );
-      $hash_ids = array_filter( array_values( $hash_ids ) );
+    if ( isset( $part['type'] ) && 'attachment' === $part['type'] ) {
+        if ( 'email' === $destination ) {
+            $hash_ids = maybe_unserialize( $original_value );
+            $hash_ids = array_filter( array_values( $hash_ids ) );
+            $files = happyforms_get_attachment_controller()->get( array(
+                'hash_id' => $hash_ids
+            ) );
 
-      $attachments = happyforms_get_attachment_controller()->get( array(
-        'hash_id' => $hash_ids
-      ) );
+            $value = array();
 
-      $links = array();
+            foreach ( $files as $file ) {
+                $file_id = $file['ID'];
+                $title = $file['post_title'];
+                $url = wp_get_attachment_url( $file_id );
+                $file_size = size_format( filesize( get_attached_file( $file_id ) ), 2 );
+                $value[] = "<a href=\"{$url}\" target=\"_blank\">{$title}</a> ({$file_size})";
+            }
 
-      foreach ( $attachments as $attachment ) {
-        $attachment_id = $attachment['ID'];
-        $title = $attachment['post_title'];
-        $url = wp_get_attachment_url( $attachment_id );
-        $file_size = size_format( filesize( get_attached_file( $attachment_id ) ), 2 );
-        $links[] = "<a href=\"{$url}\" target=\"_blank\">{$title}</a> ({$file_size})";
-      }
-
-      $value = implode( ', ', $links );
+            $value = implode( '<br>', $value );
+        }
     }
-  }
 
-  return $value;
+    return $value;
 }
 
 add_filter( 'happyforms_message_part_value', 'custom_attachment_email_part_value', 10, 4 );
-
 
 function add_google_fonts() {
 	wp_enqueue_style( ' add_google_fonts ', ' https://fonts.googleapis.com/css?family=Open+Sans:300,400', false );}
