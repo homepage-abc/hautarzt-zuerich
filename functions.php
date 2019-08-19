@@ -141,6 +141,28 @@ function custom_attachment_email_part_value( $value, $original_value, $part, $de
 
 add_filter( 'happyforms_message_part_value', 'custom_attachment_email_part_value', 10, 4 );
 
+/**
+ * Add attachments to e-mails.
+ *
+ */
+
+function happyforms_attach_uploads( $email_message ) {
+    $controller = happyforms_get_attachment_controller();
+    $files = $controller->get( array(
+        'response_id' => $email_message->message['ID'],
+    ) );
+    $file_ids = wp_list_pluck( $files, 'ID' );
+    $paths = array_map( 'get_attached_file', $file_ids );
+
+    foreach( $paths as $path ) {
+        $email_message->add_attachment( $path );
+    }
+
+    return $email_message;
+}
+
+add_filter( 'happyforms_email_alert', 'happyforms_attach_uploads' );
+
 function add_google_fonts() {
 	wp_enqueue_style( ' add_google_fonts ', ' https://fonts.googleapis.com/css?family=Open+Sans:300,400', false );}
 	add_action( 'wp_enqueue_scripts', 'add_google_fonts' );
